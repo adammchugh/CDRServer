@@ -13,3 +13,13 @@ sudo systemctl enable elasticsearch
 
 echo "Installing NodeJS"
 sudo apt install nodejs npm -y
+sudo apt install build-essential -y
+sudo npm install pm2@latest -g
+
+echo "Installing Nginx"
+sudo apt install nginx -y
+
+echo "Creating CDRServer Base Directory"
+sudo mkdir /etc/cdrserver/
+sudo chown $USER:$USER /etc/cdrserver/
+
